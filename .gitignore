@@ -1,0 +1,30 @@
+ * Write a description of class segundero here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+
+
+
+public class Segundero implements Runnable {
+    @Override
+    public void run() {
+        int segundos = 0;
+
+        try {
+            while (true) {
+                
+                segundos++;
+
+                
+                System.out.println("Segundos transcurridos: " + segundos);
+
+                
+                Thread.sleep(1000); 
+            }
+        } catch (InterruptedException e) {
+            
+            System.out.println("Segundero interrumpido, terminando ejecución.");
+        }
+    }
+}
